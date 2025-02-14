@@ -3,7 +3,7 @@ let secreNombre= Math.floor(Math.random()*20) + 1
 let score = 20
 let highscore= 0
 //Selection des elements 
-let gai = document.querySelector("again")
+let gai = document.querySelector(".again")
 let gues = document.querySelector(".guess")
 let chec = document.querySelector(".check")
 let messag= document.querySelector(".message")
@@ -48,3 +48,12 @@ chec.addEventListener('click', () => {
     }
 })
 //Gestion pour le bouton again 
+gai.addEventListener('click', ()=>{
+    score =20 
+    secreNombre= Math.floor(Math.random()*20) + 1
+    messag.textContent= "Reprendre"
+    scorElement.textContent= score
+    gues.value=''
+    nombreDisplay.textContent= '?'
+    body.style.backgroundColor= '#222'
+})
